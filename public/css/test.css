@@ -1,0 +1,154 @@
+#page-orphanage{
+    display: flex;
+    min-height: 100vh;
+   
+}
+aside.sidebar{
+   position: fixed;
+   height: 100%;
+   padding: 3.2rem 2.4rem;/* ou 32px 24px */
+   background: #15c3d6;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+aside.sidebar footer button{
+width: 48px;
+height: 48px;
+border: none;
+background:#12afcb;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: background .2s;
+}
+aside.sidebar footer button:hover{
+
+    background:#17d6eb;
+    
+    }
+    
+
+.with-sidebar{
+    padding-left: 110px;
+}
+
+/* details */
+
+.orphanage-details{
+     width:70rem;/* ou 700px */
+     margin: 6.4rem auto;
+     background:#fff;
+     border: 1px solid #d3e2e5;
+     border-radius: 2rem ;/* ou 20px */
+     overflow: hidden;
+
+}
+.orphanage-details > img{
+    width:100%;
+    height: 30rem;
+    object-fit: cover;
+
+}
+.images{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    column-gap: 1.6rem;
+    margin:16px 40px 0;
+}
+.images button{
+    border:0;
+    background:none;
+    height: 8.8rem;
+
+    cursor: pointer;
+    border-radius: 2rem;
+    overflow: hidden;
+    opacity: .6;
+    transition:opacity .2s;
+}
+.images button:hover,
+.images button.active{
+    opacity: 1;
+}
+.images button img{
+    width:100%;
+    height: 8.8rem;
+    object-fit: cover;
+}
+/* orphanage-details-content */
+
+.orphanage-details-content{
+    padding:8rem; /* ou 80px */
+
+}
+.orphanage-details-content h1{
+    color: #4d6f80;
+    transition:text-shadow .2s ;
+    
+   font-size: 5.4;
+   line-height: 1.5; 
+   margin-bottom: .8rem;
+}
+.orphanage-details-content h1::after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    color: #4d6f80;
+    filter: blur(15px) ;   
+}
+
+.orphanage-details-content h1:hover{
+    color:#4d6f80;
+    /* text-shadow: 1px 0 7px #8dc6e2, 0px 0 8px #73a9c4, 0px 0 20px #73a9c4; */
+  
+}
+.orphanage-details-content p{
+    color: #5c8588;
+   line-height: 1.6;
+   margin-top: 2.4rem; 
+  
+}
+
+/* map */
+.map-container{
+    margin-top: 6.4rem;
+    background: #e6f7fb;
+    border:1px solid #b3dae2;
+    border-radius: 2rem;
+}
+#mapid{
+    width: 100%;
+    height: 28rem;
+}
+.map-container footer{
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.map-container footer a{
+    color: #0089a5;
+    text-decoration: none;
+    
+}
+.map-container footer a:hover{
+   
+    text-decoration: underline;
+}
+
+.map-container .leaflet-container{
+    border-bottom: 1px solid #dde3f0;
+    border-radius: 2rem;
+}
+.orphanage-details-content hr{
+    width: 100%;
+    height: 1px;
+    border:0;
+    background: #d3e2e5;
+    margin: 6.4rem 0;
+}
